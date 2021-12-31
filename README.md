@@ -11,7 +11,7 @@ In this project we have implemented a multiplayer tic tac toe game using socket 
 `WPF (.Net Framework)`
 `Socket Programming`
 -	User can play as single player against AI
--	User can play as multiplayer against opponents through LAN
+-	User can play as multiplayer against opponents through LAN\similar wifi\common communications line
 -	User can connect to server by entering their name
 -	User can choose from list of available players to play with.
 -	Users can chat with each other through chat system
