@@ -1,0 +1,31 @@
+﻿<Window x:Class="Client.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Client"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="500" Width="600" MinHeight="250" MinWidth="290">
+    <Grid>
+        <Grid Width="400" Height="300" VerticalAlignment="Center" HorizontalAlignment="Center">
+            <Label Content="Tic Tac" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="48" FontWeight="ExtraBlack" FontFamily="Showcard Gothic" Margin="105,36,105,0"/>
+
+            <Button Click="SinglePlayerClick" Content="Single Player" FontSize="15" FontFamily="Dubai" Margin="105,162,105,101" BorderThickness="2" Background="#FF1945FD" Foreground="White" BorderBrush="#FF1945FD" FontWeight="Bold">
+                <Button.Resources>
+                    <Style TargetType="Border">
+                        <Setter Property="CornerRadius" Value="4"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
+
+            <Button Click="MultiPlayerClick" Content="Multi-Player" FontSize="15" FontFamily="Dubai" Margin="105,204,105,59" BorderThickness="2" Background="#FF1945FD" Foreground="White" BorderBrush="#FF1945FD" FontWeight="Bold">
+                <Button.Resources>
+                    <Style TargetType="Border">
+                        <Setter Property="CornerRadius" Value="4"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
+        </Grid>
+
+    </Grid>
+</Window>

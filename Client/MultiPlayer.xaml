@@ -1,0 +1,107 @@
+﻿<Window x:Class="Client.MultiPlayer"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Client"
+        mc:Ignorable="d"
+        Title="MultiPlayer" Height="500" Width="850" MinHeight="450" MinWidth="800" Closing="Window_Closing">
+
+
+    <Grid Height="419" VerticalAlignment="Center" HorizontalAlignment="Center" Width="792">
+
+        <Grid x:Name="ButtonContainer" Width="191" HorizontalAlignment="Right" Margin="0,38,308,218">
+            <Grid.RowDefinitions>
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+
+            <Button Click="GridButtonClick" x:Name="button1" Content="" Grid.Row="0" Grid.Column="0" Background="#FFF" Foreground="#000" FontSize="24" FontWeight="ExtraBlack" FontFamily="Segoe Print" BorderBrush="#FF1945FD" BorderThickness="0,0,2,2" />
+            <Button Click="GridButtonClick" x:Name="button2" Content="" Grid.Row="1" Grid.Column="0" Background="#FFF" Foreground="#000" FontSize="24" FontWeight="ExtraBlack" FontFamily="Segoe Print" BorderBrush="#FF1945FD" BorderThickness="0,2,2,2"/>
+            <Button Click="GridButtonClick" x:Name="button3" Content="" Grid.Row="2" Grid.Column="0" Background="#FFF" Foreground="#000" FontSize="24" FontWeight="ExtraBlack" FontFamily="Segoe Print" BorderBrush="#FF1945FD" BorderThickness="0,2,2,0"/>
+            <Button Click="GridButtonClick" x:Name="button4" Content="" Grid.Row="0" Grid.Column="1" Background="#FFF" Foreground="#000" FontSize="24" FontWeight="ExtraBlack" FontFamily="Segoe Print" BorderBrush="#FF1945FD" BorderThickness="2,0,2,2"/>
+            <Button Click="GridButtonClick" x:Name="button5" Content="" Grid.Row="1" Grid.Column="1" Background="#FFF" Foreground="#000" FontSize="24" FontWeight="ExtraBlack" FontFamily="Segoe Print" BorderBrush="#FF1945FD" BorderThickness="2,2,2,2"/>
+            <Button Click="GridButtonClick" x:Name="button6" Content="" Grid.Row="2" Grid.Column="1" Background="#FFF" Foreground="#000" FontSize="24" FontWeight="ExtraBlack" FontFamily="Segoe Print" BorderBrush="#FF1945FD" BorderThickness="2,2,2,0"/>
+            <Button Click="GridButtonClick" x:Name="button7" Content="" Grid.Row="0" Grid.Column="2" Background="#FFF" Foreground="#000" FontSize="24" FontWeight="ExtraBlack" FontFamily="Segoe Print" BorderBrush="#FF1945FD" BorderThickness="2,0,0,2"/>
+            <Button Click="GridButtonClick" x:Name="button8" Content="" Grid.Row="1" Grid.Column="2" Background="#FFF" Foreground="#000" FontSize="24" FontWeight="ExtraBlack" FontFamily="Segoe Print" BorderBrush="#FF1945FD" BorderThickness="2,2,0,2"/>
+            <Button Click="GridButtonClick" x:Name="button9" Content="" Grid.Row="2" Grid.Column="2" Background="#FFF" Foreground="#000" FontSize="24" FontWeight="ExtraBlack" FontFamily="Segoe Print" BorderBrush="#FF1945FD" BorderThickness="2,2,0,0"/>
+        </Grid>
+
+        <Label Content="Player 1" HorizontalAlignment="Left" Margin="541,40,0,0" VerticalAlignment="Top" Foreground="Black" FontSize="15" FontFamily="Dubai" Height="auto" Width="auto"/>
+        <Label x:Name="Player1" Content="--" HorizontalAlignment="Left" Margin="607,40,0,0" VerticalAlignment="Top" Foreground="Black" FontSize="15" FontFamily="Dubai" Height="auto" Width="auto"/>
+        <Label Content="Player 2" HorizontalAlignment="Left" Margin="541,80,0,0" VerticalAlignment="Top" Foreground="Black" FontSize="15" FontFamily="Dubai" Height="auto" Width="auto"/>
+        <Label x:Name="Player2" Content="--" HorizontalAlignment="Left" Margin="607,80,0,0" VerticalAlignment="Top" Foreground="Black" FontSize="15" FontFamily="Dubai" Height="auto" Width="auto"/>
+        <Label Content="You are with" HorizontalAlignment="Left" Margin="541,120,0,0" VerticalAlignment="Top" Foreground="Black" FontSize="15" FontFamily="Dubai" Height="auto" Width="auto"/>
+        <Label x:Name="youWithLabel" Content="--" HorizontalAlignment="Left" Margin="635,120,0,0" VerticalAlignment="Top" Foreground="Black" FontSize="15" FontFamily="Dubai" Height="auto" Width="auto"/>
+        <Label Content="Current Player" HorizontalAlignment="Left" Margin="541,160,0,0" VerticalAlignment="Top" Foreground="Black" FontSize="15" FontFamily="Dubai" Height="auto" Width="auto"/>
+        <Label x:Name="cPlayerLabel" Content="--" HorizontalAlignment="Left" Margin="648,160,0,0" VerticalAlignment="Top" Foreground="Black" FontSize="15" FontFamily="Dubai" Height="auto" Width="auto"/>
+
+
+        <Button x:Name="playButton" Click="PlayButton_Click" Content="Play" FontSize="15" Height="32" FontWeight="ExtraBlack" Background="#FF1945FD" Foreground="White" FontFamily="Dubai" BorderThickness="2" BorderBrush="#FF1945FD" Margin="10,295,608,0" VerticalAlignment="Top">
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="4"/>
+                </Style>
+            </Button.Resources>
+        </Button>
+
+        <Button x:Name="connectButton" Click="ConnectButton_Click" Content="Connect" FontSize="15" Height="32" FontWeight="ExtraBlack" Background="#FF1945FD" Foreground="White" FontFamily="Dubai" BorderThickness="2" BorderBrush="#FF1945FD" Margin="10,85,608,0" VerticalAlignment="Top">
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="4"/>
+                </Style>
+            </Button.Resources>
+        </Button>
+
+        <Button x:Name="closeButton" Content="Exit" Click="CloseButton_Click" FontSize="15" Height="32" FontWeight="ExtraBlack" Background="#FF1945FD" Foreground="White" FontFamily="Dubai" BorderThickness="2" BorderBrush="#FF1945FD" VerticalAlignment="Top" HorizontalAlignment="Center" Margin="10,377,608,0" Width="174">
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="4"/>
+                </Style>
+            </Button.Resources>
+        </Button>
+
+        <Label Content="Player-O Score" HorizontalAlignment="Left" Margin="290,281,0,0" VerticalAlignment="Top" Foreground="Black" FontSize="15" FontFamily="Dubai" Height="auto"/>
+        <Label x:Name="OScoreLabel" Content="0" HorizontalAlignment="Left" Margin="397,281,0,0" VerticalAlignment="Top" Foreground="Black" FontSize="15" FontFamily="Dubai" Height="auto"/>
+        <Label Content="Player-X Score" HorizontalAlignment="Left" Margin="290,322,0,0" VerticalAlignment="Top" Foreground="Black" FontSize="15" FontFamily="Dubai" Height="auto"/>
+        <Label x:Name="XScoreLabel" Content="0" HorizontalAlignment="Left" Margin="397,322,0,0" VerticalAlignment="Top" Foreground="Black" FontSize="15" FontFamily="Dubai" Height="auto"/>
+
+
+        <Label Content="Connected Users" HorizontalAlignment="Left" Margin="10,134,0,0" VerticalAlignment="Top" Width="auto" Foreground="Black" FontSize="15" FontFamily="Dubai" Height="auto"/>
+        <ListBox x:Name="checkboxListBox" HorizontalAlignment="Left" Height="116" Margin="10,174,0,0" VerticalAlignment="Top" Width="174" BorderBrush="#000" ItemsSource="{Binding Sections}" SelectedItem="{Binding SelectedSection}" SelectionChanged="checkboxListBox_SelectionChanged" Foreground="black">
+        </ListBox>
+
+
+        <Label Content="Selected" HorizontalAlignment="Left" Margin="290,241,0,0" VerticalAlignment="Top" Foreground="Black" FontSize="15" FontFamily="Dubai" Height="auto"/>
+        <Label x:Name="selectedLabel" Content="--" HorizontalAlignment="Left" Margin="357,241,0,0" VerticalAlignment="Top" Foreground="Black" FontSize="15" FontFamily="Dubai" Width="auto" Height="auto"/>
+
+        <Label Content="Enter Your Name" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Foreground="Black" FontSize="15" FontFamily="Dubai" Height="auto"/>
+        <TextBox x:Name="nameTextBox" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" HorizontalAlignment="Left" Margin="10,0,0,339" TextWrapping="Wrap" Text="" Width="174" Background="White" BorderBrush="#FF000C1B" Foreground="#000" FontSize="15" TextChanged="nameTextBox_TextChanged" Height="30" VerticalAlignment="Bottom"/>
+
+        <Label Content="Chat" HorizontalAlignment="Left" Margin="541,215,0,0" VerticalAlignment="Top" Foreground="Black" FontSize="15" FontFamily="Dubai" Height="29" FontWeight="Bold"/>
+        <ListBox x:Name="chatListBox" HorizontalAlignment="Left" Height="123" Margin="541,249,0,0" VerticalAlignment="Top" Width="241" FontStyle="Italic">
+        </ListBox>
+
+
+        <Button x:Name="chatButton" Content="Send" Click="chatButton_Click" FontSize="15" Height="32" FontWeight="ExtraBlack" Background="#FF1945FD" Foreground="White" FontFamily="Dubai" BorderThickness="2" BorderBrush="#FF1945FD" VerticalAlignment="Top" HorizontalAlignment="Center" Margin="720,377,11,0" Width="61">
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="4"/>
+                </Style>
+            </Button.Resources>
+        </Button>
+        <TextBox x:Name="chatTextBox" HorizontalAlignment="Left" Margin="541,0,0,10" TextWrapping="Wrap" Text="" VerticalContentAlignment="Center" Width="174" Background="White" BorderBrush="#FF8E8F8F" Foreground="#000" FontSize="12" Height="32" VerticalAlignment="Bottom"/>
+
+
+
+
+    </Grid>
+
+
+</Window>
