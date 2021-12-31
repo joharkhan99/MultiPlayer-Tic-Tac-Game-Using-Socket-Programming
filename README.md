@@ -17,3 +17,39 @@ In this project we have implemented a multiplayer tic tac toe game using socket 
    - SinglePlayer
 2. <b>Server-side modules</b>
    - MainWindow
+
+### Steps To Play This Game
+
+📝IMPORTANT NOTE📝
+- open cmd/terminal and type `ipconfig`
+- Copy IPv4/IPv6 address, then open `Client/MultiPlayer.xaml.cs` file and assign your ip address to this `SERVER_IP_ADDRESS` variable.
+<br><br>
+- Server and Client both are seperate projects
+1. First run both server and client projects one by one so that it creates .exe file for both.
+2. Go to <i>\TicTacGame\Server\bin\Debug</i>
+3. Open Server.exe file/app
+4. After Server App Opens Click `Start`
+5. Now CLIENT Side
+6. Go to <i>\TicTacGame\Client\bin\Debug</i>
+7. Open Client.exe
+8. You can either play SinglePlayer or MultiPlayer
+9. With `SinglePlayer` you can play with an AI
+10. when you click on `MultiPlayer` another window will open.
+11. Enter Your Name and click `Connect`
+12. After that open another instance of Client.exe
+13. Enter your name and click `Connect`
+14. Select your opponent from list and click `Play`
+15. Congrats🎉🎊 You can now play and chat with an opponent
+16. when you dont want to play anymore exit Client.exe and on Server.exe click `Stop` button and then exit.
+17. THE END!!
+
+### ScreenShots
+#### Home Screen
+![Tic Tac Home Screen](1.PNG)
+
+#### Single Player
+![Tic Tac Single Player](2.PNG)
+
+#### Multi Player
+![Tic Tac Multi Player](3.PNG)
+![Tic Tac Multi Player](4.PNG)
